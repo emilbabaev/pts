@@ -1,0 +1,26 @@
+<html>	
+								<head>	
+									<meta charset="UTF-8">	
+									<style>
+										td, th{
+											border:1px solid #000;  border-spacing: 0px;border-collapse: collapse;vertical-align:top;padding: 5px;
+										}
+									</style>
+								</head>	
+								<body style="margin:0px;padding:0;margin-left:0px;width:100%">
+									<p class="text-center"><img src="http://elizar35.ru/img/print-header.jpg" width="628" height="163"></p>
+									<table style="text-align:left;width:100%;border:1px solid #000;border-spacing: 0px;border-collapse: collapse;" border="0"><thead><tr><th></th><th align="center">наименование</th><th align="center">размер, мм</th><th align="center">колличество в поддоне</th><th align="center">производитель</th><th align="center">вес, кг</th><th align="center">марка прочности</th><th align="center">цена руб./шт</th><th align="center">Количество и общая стоимость</th></tr></thead><tbody><tr style='height:135px'>
+								<td width="130"><div class="color-name"></div><img style="margin-top: 5px;" width="120" height="95" src="http://elizar35.ru/images/prod/sc3e3958ebf08.jpg" alt="Камень керамический пустотелый 2,1 НФ Петрокерамика"></td>
+								<td>Камень керамический пустотелый 2,1 НФ Петрокерамика</td>
+								<td align="center">250/120/140</td>
+								<td align="center">216</td>
+								<td align="center"></td>
+								<td align="center">3,9</td>
+								<td align="center">М 150</td>
+								<td align="center">16,9
+								</td>
+								<td align="left">
+									1<br>
+									Стоимость: 16,90
+								</td>
+							</tr></tbody></table><p align="right">Итого: 16,9 руб.</p></body></html>

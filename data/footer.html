@@ -1,0 +1,170 @@
+<footer>
+    <div class="container-fluid footer-top">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="footer-top-left">
+                            <a href="/" <?if ($page_url == "") {?>class="active"<?}?>>Главная</a>
+                            <a href="/gallery/" <?if ($page_url == "gallery") {?>class="active"<?}?>>Услуги печников</a>
+                            <a href="/contacts/" <?if ($page_url == "contacts") {?>class="active"<?}?>>Контакты</a>
+                        </div>
+                        <div class="footer-top-right">
+                            <span class="hidden-md"><img src="/img/svg/address-gray.svg">УЛ. ГОГОЛЯ, 51</span>
+                            <span class="hidden-md"><img src="/img/svg/time-gray.svg">ПН-ПТ 08:00 - 17:00</span>
+                            <a href="tel:+79217329093"><img src="/img/svg/phone-gray.svg">8 (921) 732-90-93</a>
+                            <a href="tel:+78202529093"><img src="/img/svg/phone-gray.svg">8 (8202) 52-90-93</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer-bottom">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 footer-bottom-left">
+                        <span>ИП Толстикова Ю.В., Copyright © <?=date('Y')?></span>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 footer-bottom-right">
+                        <a href="https://wbest.ru/?utm_source=site-client&utm_medium=banner&utm_campaign=wbest&utm_content=kirpich-cherepovets" target="_blank">Разработано<img src="/img/svg/webest.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="container-fluid basket-fixed">
+    <div class="row">
+        <div class="col-xs-4 visible-lg basket-fixed-left">
+            <span>ГРАФИК  ОТГРУЗОК: ПН-ВС 09:00 - 17:00</span>
+        </div>
+        <div class="col-xs-12 col-lg-4 basket-fixed-center">
+            <!--<a href="/cart/"><span class="icon-basket-fixed"></span>Корзина пуста - <span class="inbasketcount">0</span> товаров на <span class="inbasketsumm">0</span> рублей</a>-->
+            <a href="/cart/"><span class="icon-basket-fixed"></span><span id="footer-cart">Загрузка корзины...</span></a>
+        </div>
+        <div class="col-xs-4 visible-lg basket-fixed-right">
+            <a href="tel:+79217329093">8 (921) 732-90-93</a>
+            <a href="tel:+78202529093">8 (8202) 52-90-93</a>
+        </div>
+    </div>
+</div>
+
+<!--Модальные окна-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="/img/svg/close.svg"></button>
+            <div class="modal-body text-center" id="myModalContent">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalGalleryAdd" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="/img/svg/close.svg"></button>
+                <h4 class="modal-title">Размещение Ваших работ</h4>
+            </div>
+            <div class="modal-body">
+                <form id="formGalleryAdd" onsubmit="yaCounter46843548.reachGoal('otpravil_zayvky');>
+                    <input type="hidden" name="reply" value="Фото успешно отправлено.">
+                    <input type="hidden" name="theme" value="Добавление фото в галерею.">
+                    <div class="row">
+                        <div class="col-xs-12 profile-photo">
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="photo">
+                                    <span>Установить фото профиля</span>
+                                </label>
+                            </div>
+                            <input type="text" id="filename" class="filename" disabled>
+                        </div>
+                        <div class="col-xs-12 col-md-6 modal-form-padding">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="tel" class="form-control phone-mask" placeholder="Телефон" required>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 modal-form-padding">
+                            <div class="form-group">
+                                <textarea name="text"  class="form-control" rows="4" placeholder="Комментарий" required></textarea>
+                            </div>
+                            <div class="file-upload2">
+                                <label>
+                                    <input type="file" name="imgs" accept="image/jpeg,image/png" multiple>
+                                    <span><img src="/img/svg/services-photo-plus.svg">Добавить фото работ</span>
+                                </label>
+                            </div>
+                            <input type="text" id="filename2" class="filename2" disabled>
+                        </div>
+                        <div class="col-xs-12 btn-modal-form">
+                            <button type="submit" class="btn animated-button btn-yellow"><span>Отправить</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/production_duble.js"></script>
+<script src="/libs/slick/slick.min.js"></script>
+<script src="/libs/owlcarousel/owl.carousel.min.js"></script>
+<script src="/js/jquery.maskedinput.min.js"></script>
+<script src="/js/jquery.scrollbar.min.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
+<script src="/js/jquery.lockfixed.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "LocalBusiness",
+  "name" : "Кирпич на Гоголя 51",
+  "image" : "https://kirpich-cherepovets.ru/img/logo.png",
+  "telephone" : [ "8 (8202) 52-90-93", " 8(921) 732-90-93" ],
+  "address" : {
+    "@type" : "PostalAddress",
+    "streetAddress" : "ул. Гоголя 51",
+    "addressLocality" : "Череповец",
+    "addressRegion" : "Вологодская обл",
+    "addressCountry" : "Россия",
+    "postalCode" : "162690"
+  },
+  "openingHoursSpecification" : [ {
+    "@type" : "OpeningHoursSpecification",
+    "dayOfWeek" : {
+      "@type" : "DayOfWeek",
+      "name" : "пн-пт с 08:00 до 17:00"
+    }
+  }, {
+    "@type" : "OpeningHoursSpecification",
+    "dayOfWeek" : {
+      "@type" : "DayOfWeek",
+      "name" : "сб, вс - выходной"
+    }
+  } ],
+  "url" : "https://kirpich-cherepovets.ru/"
+}
+
+</script>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46843548 = new Ya.Metrika({ id:46843548, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46843548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

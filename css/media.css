@@ -1,0 +1,575 @@
+@media (min-width: 768px) {
+    .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-15px);
+        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    }
+
+    .open > .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0%);
+        transition-delay: 0s, 0s, 0.3s;
+    }
+
+    .modal-dialog {
+        margin: 85px auto 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 845px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) {
+    .block-products-price {
+        width: 40%;
+    }
+
+    .block-products-text {
+        width: 60%;
+    }
+
+    .photo-specialist a {
+        width: 33.3%;
+    }
+
+    .price-product {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-top-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-top-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-top-left span {
+        margin: 0 10px;
+        white-space: nowrap;
+    }
+
+    .header-top-right span {
+        margin: 0 10px;
+        white-space: nowrap;
+    }
+
+    .navbar-price {
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-price a {
+        border-top: 1px solid #ccc;
+        padding: 0 25px;
+        width: 50%;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .footer-top-left a:first-child {
+        padding-left: 13px;
+    }
+
+    .footer-top-left {
+        width: 100%;
+        text-align: center;
+        font-size: 0;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .footer-top-right span {
+        margin: 0 7px;
+        white-space: nowrap;
+    }
+
+    .footer-top-right a {
+        margin: -3px 7px 0;
+        white-space: nowrap;
+    }
+
+    .footer-top-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .block-products-price {
+        width: 35%;
+    }
+
+    .block-products-text {
+        width: 65%;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .about-info {
+        display: block;
+        float: left;
+        border-right: 1px solid #ccc;
+        border-bottom: 0;
+    }
+
+    .news-bg {
+        display: block;
+        float: left;
+    }
+
+    .photo-specialist a {
+        width: 25%;
+    }
+
+    .block-text-news {
+        padding-left: 15px;
+    }
+
+    .block-text-news {
+        min-height: inherit;
+    }
+
+    .table-basket .table > tbody > tr > td:nth-child(1) {
+        min-width: 160px;
+    }
+
+    .table-basket .table > tbody > tr > td:nth-child(2) {
+        min-width: 290px;
+    }
+
+    .table-basket .table > tbody > tr > td:nth-child(3) {
+        min-width: 290px;
+    }
+
+    .table-basket .table > tbody > tr > td:nth-child(4) {
+        min-width: 95px;
+    }
+
+    .table-basket .table > tbody > tr > td:nth-child(5) {
+        min-width: 155px;
+    }
+
+    .table-basket .table > tbody > tr > td:nth-child(6) {
+        min-width: 95px;
+    }
+
+    .table-basket .table > tbody > tr > td:nth-child(7) {
+        min-width: 30px;
+    }
+
+    .header-top-right a:nth-child(1) {
+        margin-left: 0 !important;
+    }
+
+    .main-block-products-text p {
+        height: 42px;
+    }
+
+    .main-block-products-text {
+        margin-bottom: 0;
+    }
+
+    .main-block-products-btn .btn-gray-two {
+        width: 50%;
+    }
+
+    .top-main-filter {
+        padding: 0 15px;
+    }
+
+    .block-products .block-products-info .text-center > .img-prod-catalog {
+        width: 143px !important;
+        height: 95px !important;
+    }
+
+    .price-product-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .bg-gray-form {
+        padding-bottom: 0;
+    }
+
+    .link-basket {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .title-news {
+        font-size: 19px;
+        margin-bottom: 20px;
+    }
+
+    .date-news {
+        font-size: 20px;
+    }
+
+    .header-top-right a {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .fancybox-placeholder:after {
+        right: 10px;
+    }
+
+    .navbar-price a {
+        width: 50%;
+        height: 50px;
+        line-height: 50px;
+        padding: 0;
+    }
+
+    .navbar-brand {
+        height: 60px;
+        padding: 0 15px;
+        line-height: 60px;
+    }
+
+    .navbar-brand > img {
+        width: 200px;
+    }
+
+    .navbar-default .navbar-nav > li > a:after {
+        display: none;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        padding: 0;
+    }
+
+    .dropdown-menu-list .dropdown-table {
+        display: block;
+    }
+
+    .dropdown-menu-list .dropdown-table > div {
+        display: block;
+    }
+
+    .dropdown-menu-list .dropdown-table div > .dropdown-indent {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .dropdown-menu-list .dropdown-table > div > .dropdown-indent a.dropdown-title {
+        margin-bottom: 5px;
+    }
+
+    .footer-bottom-left {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom-right {
+        text-align: center;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        background: #f6f6f7;
+    }
+
+    .slider-bg {
+        padding: 50px 15px;
+    }
+
+    .slider-info {
+        padding: 25px 25px 0;
+    }
+
+    .slider-info h2 {
+        margin-bottom: 20px;
+        font-size: 25px;
+        max-height: 27px;
+    }
+
+    .slider-info p {
+        margin-bottom: 15px;
+        font-size: 16px;
+        max-height: 110px;
+    }
+
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        bottom: 60px;
+        left: 40px;
+    }
+
+    .block-products {
+        height: 320px;
+        padding: 20px 5px 0;
+    }
+
+    .block-products-info {
+        height: 280px;
+    }
+
+    .block-products-text {
+        width: 100%;
+    }
+
+    .block-products-price {
+        width: 100%;
+    }
+
+    .title-block-products {
+        height: auto;
+        padding: 40px 15px 40px;
+    }
+
+    .title-block-products a.animated-button.btn-gray {
+        position: relative;
+        bottom: auto;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .title-block-manufacturers {
+        height: auto;
+        padding: 40px 15px 40px;
+    }
+
+    .about-info {
+        padding: 40px 15px;
+    }
+
+    .icon-about-info {
+        text-align: center;
+    }
+
+    .icon-about-info span:after {
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    .icon-about-info span {
+        background-position: center !important;
+    }
+
+    .news-bg {
+        padding: 40px 15px;
+    }
+
+    .news-bg a.animated-button.btn-gray {
+        position: relative;
+        bottom: auto;
+        margin-top: 20px;
+    }
+
+    .maps-contacts {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .info-contacts {
+        width: 100%;
+        padding-left: 15px;
+        margin-bottom: 50px;
+    }
+
+    .maps-border {
+        height: 200px;
+    }
+
+    .form-top-left {
+        padding-right: 15px;
+    }
+
+    .form-top-right {
+        padding-left: 15px;
+    }
+
+    .photo-specialist a {
+        width: 33.3%;
+    }
+
+    .phone-specialist {
+        text-align: center;
+        height: auto;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .info-specialist {
+        border-bottom: 0;
+        margin-bottom: 0;
+        text-align: center;
+        padding-left: 65px;
+        padding-bottom: 10px;
+        height: 65px;
+    }
+
+    .btn-data-services {
+        text-align: center;
+    }
+
+    .close {
+        right: 5px;
+        top: 5px;
+    }
+
+    .modal-body {
+        padding: 60px 5px 20px;
+    }
+
+    .modal-title {
+        font-size: 24px;
+    }
+
+    .modal-header:after {
+        width: 260px;
+        margin-left: -130px;
+    }
+
+    .block-text-news > .img-news {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .form-data-order {
+        padding: 30px 20px;
+    }
+
+    .form-data-left {
+        padding-right: 15px;
+    }
+
+    .form-data-right {
+        padding-left: 15px;
+    }
+
+    .link-basket a {
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    .table-responsive > .table > tbody > tr > td, .table-responsive > .table > tbody > tr > th, .table-responsive > .table > tfoot > tr > td, .table-responsive > .table > tfoot > tr > th, .table-responsive > .table > thead > tr > td, .table-responsive > .table > thead > tr > th {
+        white-space: normal;
+    }
+
+    .features-product {
+        padding-left: 15px;
+        margin-top: 30px;
+    }
+
+    .top-main-filter {
+        text-align: center;
+    }
+
+    .bottom-filter .label {
+        width: 48%;
+        margin: 0 1% 5px 1%;
+    }
+
+    .basket-fixed-center a {
+        font-size: 16px;
+    }
+
+    .basket-fixed {
+        padding: 9px 15px;
+    }
+
+    .main-block-products {
+        padding: 15px 10px;
+    }
+
+    .breadcrumbs {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .bottom-filter .label img {
+        right: 5px;
+        width: 60px;
+    }
+
+    .nav-price {
+        margin-bottom: 20px;
+    }
+
+    .navbar-price .link-catalog {
+        display: inline-block;
+    }
+
+    .navbar-fixed-top .navbar-price {
+        display: none;
+    }
+
+    .navbar-default {
+        top: -70px;
+        position: inherit;
+        transition: top .3s ease;
+    }
+
+    .navbar-fixed-top {
+        top: 0 !important;
+        position: fixed;
+    }
+
+    .title-main {
+        text-align: center;
+    }
+
+    .price-product-info {
+        text-align: center;
+    }
+
+    .card-specialist {
+        padding: 10px 20px 0;
+    }
+
+    .main-block-products-text p {
+        text-align: center;
+    }
+
+    .main-block-products-price {
+        text-align: center;
+    }
+
+    .block-products-text p {
+        text-align: center;
+    }
+
+    .block-products-price {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

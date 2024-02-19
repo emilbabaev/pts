@@ -1,0 +1,102 @@
+/* font-family: "OpenSansRegular"; */
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot");
+    src: url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OpenSansLight"; */
+@font-face {
+    font-family: "OpenSansLight";
+    src: url("../fonts/OpenSans/OpenSansLight/OpenSansLight.eot");
+    src: url("../fonts/OpenSans/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSansLight/OpenSansLight.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSansLight/OpenSansLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OpenSansBold"; */
+@font-face {
+    font-family: "OpenSansBold";
+    src: url("../fonts/OpenSans/OpenSansBold/OpenSansBold.eot");
+    src: url("../fonts/OpenSans/OpenSansBold/OpenSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSansBold/OpenSansBold.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSansBold/OpenSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OpenSansSemiBold"; */
+@font-face {
+    font-family: "OpenSansSemiBold";
+    src: url("../fonts/OpenSans/OpenSansSemiBold/OpenSansSemiBold.eot");
+    src: url("../fonts/OpenSans/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "Exo2Regular";
+@font-face {
+    font-family: "Exo2Regular";
+    src: url("../fonts/Exo2/Exo2Regular/Exo2Regular.eot");
+    src: url("../fonts/Exo2/Exo2Regular/Exo2Regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Exo2/Exo2Regular/Exo2Regular.woff") format("woff"),
+    url("../fonts/Exo2/Exo2Regular/Exo2Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+} */
+/* font-family: "Exo2Light";
+@font-face {
+    font-family: "Exo2Light";
+    src: url("../fonts/Exo2/Exo2Light/Exo2Light.eot");
+    src: url("../fonts/Exo2/Exo2Light/Exo2Light.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Exo2/Exo2Light/Exo2Light.woff") format("woff"),
+    url("../fonts/Exo2/Exo2Light/Exo2Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+} */
+
+/* font-family: "Exo2Regular"; */
+@font-face {
+    font-family: "Exo2Regular";
+    src: url("../fonts/Exo2/exo2.ttf");
+    src: url("../fonts/Exo2/exo2.woff") format("woff"),
+    url("../fonts/Exo2/exo2.woff2") format("woff2"),
+    url("../fonts/Exo2/exo2.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "Exo2Light"; */
+@font-face {
+    font-family: "Exo2Light";
+    src: url("../fonts/Exo2/exo2light.ttf");
+    src: url("../fonts/Exo2/exo2light.woff") format("woff"),
+    url("../fonts/Exo2/exo2light.woff2") format("woff2"),
+    url("../fonts/Exo2/exo2light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "Exo2RegularCondensed"; */
+@font-face {
+    font-family: "Exo2RegularCondensed";
+    src: url("../fonts/Exo2/exo2regularcondensed.ttf");
+    src: url("../fonts/Exo2/exo2regularcondensed.woff") format("woff"),
+    url("../fonts/Exo2/exo2regularcondensed.woff2") format("woff2"),
+    url("../fonts/Exo2/exo2regularcondensed.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "Exo2LightCondensed"; */
+@font-face {
+    font-family: "Exo2LightCondensed";
+    src: url("../fonts/Exo2/exo2lightcondensed.ttf");
+    src: url("../fonts/Exo2/exo2lightcondensed.woff") format("woff"),
+    url("../fonts/Exo2/exo2lightcondensed.woff2") format("woff2"),
+    url("../fonts/Exo2/exo2lightcondensed.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="utf-8">
+    <title><?echo $title;?></title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" href="/pn/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/pn/lib/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="/libs/dropdowns-enhancement/dropdowns-enhancement.css">
+    <script src="/pn/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+    <script src="/pn/lib/jQuery-Knob/js/jquery.knob.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".knob").knob();
+        });
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/theme.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/premium.css">
+
+</head>
+<body class=" theme-blue">
+
+    <!-- Demo page code -->
+
+    <script type="text/javascript">
+        $(function() {
+            var match = document.cookie.match(new RegExp('color=([^;]+)'));
+            if(match) var color = match[1];
+            if(color) {
+                $('body').removeClass(function (index, css) {
+                    return (css.match (/\btheme-\S+/g) || []).join(' ')
+                })
+                $('body').addClass('theme-' + color);
+            }
+
+            $('[data-popover="true"]').popover({html: true});
+            
+        });
+    </script>
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { 
+            color: #fff;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function() {
+            var uls = $('.sidebar-nav > ul > *').clone();
+            uls.addClass('visible-xs');
+            $('#main-menu').append(uls.clone());
+        });
+    </script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+   
+  <!--<![endif]-->
+
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header" style="margin-left: -20px;">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="" href="http://<?echo $_SERVER['SERVER_NAME'];?>" target="_blank" style="overflow: auto;display: block;" > <span class="navbar-brand" style="font-size: 14px;"><img src="/pn/images/home63.png" style="vertical-align: middle;margin-top: -5px;width: 25px;"> <?echo $_SERVER['SERVER_NAME'];?> перейти на сайт</span></a>
+		  </div>
+		<?
+		if (isset($_SESSION["user_id"]))
+		{
+			
+		?>
+        <div class="navbar-collapse collapse" style="float: right;">
+          <ul id="main-menu" class="nav navbar-nav navbar-right">
+            <li class="dropdown hidden-xs">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span>Администратор
+                    <i class="fa fa-caret-down"></i>
+                </a>
+
+              <ul class="dropdown-menu">
+                <li><a href="/pn/">Профиль</a></li>
+                <li class="divider"></li>
+
+                <li><a tabindex="-1" href="/pn/sign-out.php">Выход</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <div class="sidebar-nav">
+    <ul>
+		<li><a href="/pn/city.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Регионы</a></li>
+		<li><a href="/pn/category.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Категории</a></li>
+		<li><a href="/pn/size.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Размер</a></li>
+		<li><a href="/pn/producer.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Производители</a></li>
+		<li><a href="/pn/color.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Цвет</a></li>
+		<li><a href="/pn/brand_strength.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Марка прочности</a></li>
+		<li><a href="/pn/prod.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Каталог в Череповце</a></li>
+		<li><a href="/pn/banner.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Баннер</a></li>
+		<li><a href="/pn/article.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Информация</a></li>
+		<li><a href="/pn/news.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Новости</a></li>
+		<li><a href="/pn/order.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Заказы</a></li>
+		<li><a href="/pn/gallery_category.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Категории галереи</a></li>
+		<li><a href="/pn/gallery.php" class="nav-header"><i class="glyphicon glyphicon-book"></i> Галерея</a></li>
+	</ul>
+    </div>
+
+    <div class="content">
+
+	<?}?>

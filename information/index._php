@@ -1,0 +1,47 @@
+<?
+session_start();
+$title = "Полезная информация о кирпичах от компании «Кирпич на Гоголя 51»";
+$description = "Полезная информационная страница от компании «Кирпич на Гоголя 51» о видах и характеристиках кирпича. Облицовке, выборе отделочного кирпича. Высолах на поверхности кирпича.";
+$keywords = "Полезная информация";
+include $_SERVER['DOCUMENT_ROOT']."/pn/bd.php";
+if (isset($param)){
+	$result = mysql_query("SELECT * FROM `article` WHERE `url`='".$param."'");
+	$count = mysql_num_rows($result);
+	if ($count > 0) {
+		$catalog = mysql_fetch_array($result);
+		$title = $catalog['title'];
+		$description = $catalog['description'];
+		$keywords = $catalog['keywords'];
+		$text = $catalog['text'];
+	} else {
+		header("Location: /404/");
+	}
+}
+include $_SERVER['DOCUMENT_ROOT']."/data/header.html";
+
+?>
+<div class="section contacts">	
+	<div class="container">
+		<h1>Полезная информация</h1>
+		<div class="article-content">
+			<div class="left">
+				<?
+				$result = mysql_query("SELECT * FROM `article` ORDER BY `id` DESC");
+				$count = mysql_num_rows($result);
+				if ($count > 0) {
+					$catalog = mysql_fetch_array($result);
+					do {?><div class="item<?if (isset($param) && $param == $catalog['url']){?> active<?}?>"><a href="/info/<?=$catalog['url']?>"><?=$catalog['name']?></a></div><?} while ($catalog = mysql_fetch_array($result));
+				}
+				?>
+			</div>
+			<div class="right">
+				<?if (isset($param)){echo $text;}else{?><p>Кирпич - это искусственный камень, изготавливаемый в виде брусков, сформированный из минеральных материалов и приобретающий камнеподобные свойства (прочность, водостойкость, морозостойкость) после обжига или обработки паром.</p>
+
+				<p>Кирпич строительный (рядовой) - используется для внутренних рядов кладки или для внешних рядов, но с последующей штукатуркой.</p><?}?>
+			</div>
+		</div>
+	</div>
+</div>
+<?
+include $_SERVER['DOCUMENT_ROOT']."/data/footer.html";
+?>

@@ -1,0 +1,120 @@
+<html>
+		<head>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			<style>td, th{
+					border:1px solid #000;  border-spacing: 0px;border-collapse: collapse;vertical-align:top;padding: 5px;vertical-align: middle;
+					}
+					table td img{margin-top:10px;}
+					p, table{width: 100%;}</style>
+		</head>
+		<body style="margin:0px;padding:0;margin-left:0px;width:100%"><p style='text-align:center;'><img src='http://elizar35.ru/img/print-header.jpg' width='628' height='163'></p><table><thead><tr><th></th><th align="center">наименование</th><th align="center">размер, мм</th><th align="center">колличество в поддоне</th><th align="center">производитель</th><th align="center">вес, кг</th><th>марка прочности</th><th align="center">цена руб./шт</th></tr></thead><tbody><tr><td colspan="8"><h2>Кирпич рядовой</h2></td></tr><tr style='height:139px' id="prod-2" >
+						<td valign="middle" width="130"><img width="120" height="99" src="http://elizar35.ru/images/prod/s4f9336dfde3b.jpg" alt="Сокол Кирпич рядовой строительный полнотелый М 150"/></td>
+						<td>Сокол Кирпич рядовой строительный полнотелый М 150</td>
+						<td align="center">250/120/65</td>
+						<td align="center">350</td>
+						<td align="center"></td>
+						<td align="center">3</td>
+						<td align="center">150</td>
+						<td align="center">14,5</td>
+						
+					</tr><tr style='height:120px' id="prod-12" >
+						<td valign="middle" width="130"><img width="120" height="80" src="http://elizar35.ru/images/prod/s9b90828305cf.jpg" alt="Вологда кирпич рядовой строительный полнотелый М 150"/></td>
+						<td>Вологда кирпич рядовой строительный полнотелый М 150</td>
+						<td align="center">250/120/65</td>
+						<td align="center">300</td>
+						<td align="center">Вологодский кирпичный завод</td>
+						<td align="center">3</td>
+						<td align="center">150</td>
+						<td align="center">12</td>
+						
+					</tr><tr  id="prod-13" >
+						<td valign="middle" width="130"></td>
+						<td>Новгород Кирпич рядовой строительный полнотелый М 150</td>
+						<td align="center">250/120/65</td>
+						<td align="center">300</td>
+						<td align="center">Новгородский кирпичный завод</td>
+						<td align="center">3</td>
+						<td align="center">150</td>
+						<td align="center">14,5</td>
+						
+					</tr><tr style='height:120px' id="prod-17" >
+						<td valign="middle" width="130"><img width="120" height="80" src="http://elizar35.ru/images/prod/s0a42166af98f.jpg" alt="Боровичи кирпич силикатный полуторный"/></td>
+						<td>Боровичи кирпич силикатный полуторный</td>
+						<td align="center">250/120/88</td>
+						<td align="center">308</td>
+						<td align="center">Боровичский силикатный</td>
+						<td align="center">4,2</td>
+						<td align="center">150</td>
+						<td align="center">11,6</td>
+						
+					</tr><tr style='height:100px' id="prod-96" >
+						<td valign="middle" width="130"><img width="120" height="60" src="http://elizar35.ru/images/prod/s943220689a02.jpg" alt="Воротынск кирпич рядовой строительный полнотелый М 100, 125"/></td>
+						<td>Воротынск кирпич рядовой строительный полнотелый М 100, 125</td>
+						<td align="center">250/120/65</td>
+						<td align="center">420</td>
+						<td align="center">Воротынский кирпич</td>
+						<td align="center">3</td>
+						<td align="center">100, 125</td>
+						<td align="center">-</td>
+						
+					</tr><tr style='height:127px' id="prod-128" >
+						<td valign="middle" width="130"><img width="120" height="87" src="http://elizar35.ru/images/prod/s9ae4e8f0cd69.png" alt="Кирпич  полнотелый рядовой с рифлеными гранями Норский КЗ 1НФ"/></td>
+						<td>Кирпич  полнотелый рядовой с рифлеными гранями Норский КЗ 1НФ</td>
+						<td align="center">250/120/65</td>
+						<td align="center">420</td>
+						<td align="center">Норский КЗ</td>
+						<td align="center">3</td>
+						<td align="center">250</td>
+						<td align="center">-</td>
+						
+					</tr><tr style='height:127px' id="prod-129" >
+						<td valign="middle" width="130"><img width="120" height="87" src="http://elizar35.ru/images/prod/se8b05e65e5c6.png" alt="Кирпич  полнотелый рядовой  Норский КЗ 1НФ"/></td>
+						<td>Кирпич  полнотелый рядовой  Норский КЗ 1НФ</td>
+						<td align="center">250/120/65</td>
+						<td align="center">468</td>
+						<td align="center">Норский КЗ</td>
+						<td align="center">3</td>
+						<td align="center">200,250</td>
+						<td align="center">16,1</td>
+						
+					</tr><tr style='height:108px' id="prod-227" >
+						<td valign="middle" width="130"><img width="120" height="68" src="http://elizar35.ru/images/prod/s345313c5ff96.jpg" alt="Юрьев-Польский кирпич рядовой строительный полнотелый М 125"/></td>
+						<td>Юрьев-Польский кирпич рядовой строительный полнотелый М 125</td>
+						<td align="center">250/120/65</td>
+						<td align="center">250</td>
+						<td align="center"></td>
+						<td align="center">3</td>
+						<td align="center">125</td>
+						<td align="center">13,5</td>
+						
+					</tr><tr style='height:140px' id="prod-228" >
+						<td valign="middle" width="130"><img width="120" height="100" src="http://elizar35.ru/images/prod/s26ed5a4e5b58.jpg" alt="Боровичи кирпич силикатный одинарный"/></td>
+						<td>Боровичи кирпич силикатный одинарный</td>
+						<td align="center">250/120/65</td>
+						<td align="center">420</td>
+						<td align="center">Боровичский силикатный</td>
+						<td align="center">3</td>
+						<td align="center">150</td>
+						<td align="center">10,8</td>
+						
+					</tr><tr style='height:150px' id="prod-232" >
+						<td valign="middle" width="130"><img width="120" height="110" src="http://elizar35.ru/images/prod/sf77ca4e96056.jpg" alt="Иваново кирпич полуторный рядовой  полнотелый М 125"/></td>
+						<td>Иваново кирпич полуторный рядовой  полнотелый М 125</td>
+						<td align="center">250/120/88</td>
+						<td align="center">352</td>
+						<td align="center"></td>
+						<td align="center">3,9</td>
+						<td align="center">125</td>
+						<td align="center">19,7</td>
+						
+					</tr><tr style='height:160px' id="prod-245" >
+						<td valign="middle" width="130"><img width="120" height="120" src="http://elizar35.ru/images/prod/scb85c5bec0a8.jpg" alt="Череповец кирпич силикатный полуторный"/></td>
+						<td>Череповец кирпич силикатный полуторный</td>
+						<td align="center">250/120/88</td>
+						<td align="center">672</td>
+						<td align="center"></td>
+						<td align="center">4</td>
+						<td align="center">150</td>
+						<td align="center">9,5</td>
+						
+					</tr></tbody></table></body></html>

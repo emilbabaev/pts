@@ -1,0 +1,174 @@
+<?
+if (isset($page)) {$script_name = $_SERVER['DOCUMENT_ROOT'].$page;} else {$script_name = $_SERVER['SCRIPT_FILENAME'];}
+$LastModified_unix = strtotime(date("D, d M Y H:i:s", filectime($_SERVER['SCRIPT_FILENAME']))); $LastModified = gmdate("D, d M Y H:i:s \G\M\T", $LastModified_unix); $IfModifiedSince = false; if (isset($_ENV['HTTP_IF_MODIFIED_SINCE']))    $IfModifiedSince = strtotime(substr($_ENV['HTTP_IF_MODIFIED_SINCE'], 5)); if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']))    $IfModifiedSince = strtotime(substr($_SERVER['HTTP_IF_MODIFIED_SINCE'], 5)); if ($IfModifiedSince && $IfModifiedSince >= $LastModified_unix) {    header($_SERVER['SERVER_PROTOCOL'] . ' 304 Not Modified');    exit; } header('Last-Modified: '. $LastModified);
+if (!isset($page_url)) {
+$page_url = str_replace("/", "", $_SERVER['REQUEST_URI']);
+}
+$search = "";
+if (isset($_COOKIE['city'])){
+$search = " and `id`=".$_COOKIE['city']."";
+}
+
+$result = mysql_query("SELECT * FROM `city` WHERE 1 ".$search." LIMIT 1");
+$count = mysql_num_rows($result);
+if ($count > 0) {
+$city = mysql_fetch_array($result);
+$tel = explode(",", trim($city['tel'], ","));
+if (!isset($_SESSION['tel']) || $_SESSION['city'] != $city['id']) {$_SESSION['city'] = $city['id']; $_SESSION['tel'] = $tel[rand(0, (count($tel)-1))];}
+} else {
+if (!isset($_SESSION['tel'])) {$_SESSION['tel'] = "8 (8202) 62-43-88";}
+}
+if ($city['id'] == 1) {
+$table = "prod";
+} else if ($city['id'] == 2) {
+$table = "prod_vologda";
+$extend_menu = 'vologda';
+}
+
+?>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title><?echo $title;?></title>
+    <meta content="<?echo $description;?>" name="description" />
+    <meta content="<?echo $keywords;?>" name="keywords" />
+    <meta property="og:title" content="<?echo $title;?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kirpich-cherepovets.ru<?echo $_SERVER["REQUEST_URI"];?>">
+    <meta property="og:image" content="https://kirpich-cherepovets.ru/img/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:description" content="<?echo $description;?>">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+    <link rel="stylesheet" href="/libs/slick/slick.css"/>
+    <link rel="stylesheet" href="/libs/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="/libs/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/libs/owlcarousel/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="/css/jquery.scrollbar.css"/>
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/fonts.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/media.css"/>
+
+    <!--[if lte IE 8]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<header class="js-header">
+    <div class="container-fluid header-top js-header-top">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="header-top-left">
+                            <span><img src="/img/svg/address.svg">Г. ЧЕРЕПОВЕЦ, УЛ. ГОГОЛЯ, 51</span>
+                            <span><img src="/img/svg/time.svg">ПН-ПТ 08:00 - 17:00</span>
+                            <span class="hidden-md"><img src="/img/svg/time.svg">ГРАФИК ОТГРУЗОК: ПН-ВС 09:00 - 17:00</span>
+                        </div>
+                        <div class="header-top-right">
+                            <a href="tel:+79217329093"><img src="/img/svg/phone.svg">8 (921) 732-90-93</a>
+                            <a href="tel:+78202529093"><img src="/img/svg/phone.svg">8 (8202) 52-90-93</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default js-navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
+                    <span class="sr-only">Меню</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="Кирпич Череповец на Гоголя 51" title="Кирпич на Гоголя 51"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="menu-collapse">
+                <ul class="nav navbar-nav">
+                    <li <?if ($page_url == "") {?>class="active"<?}?>><a href="/">Главная</a></li>
+                    <li class="dropdown<?if (isset($page) && $page == '/catalog/index.php') {?> active<?}?>">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Продукция</a>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 dropdown-menu-list">
+                                        <div class="row">
+                                            <div class="dropdown-table">
+
+                                                <?
+							                        $SQL = "SELECT * FROM `category` WHERE `status`=1 and `parentId`=0 ORDER BY `id`";
+							                        $result_category = mysql_query($SQL);
+							                        $count = mysql_num_rows($result_category);
+                                                    if ($count > 0)
+                                                    {
+                                                        $i = 0;
+                                                        $category = mysql_fetch_array($result_category);
+                                                        do {
+                                                ?>
+                                                <div class="col-xs-12 col-sm-2">
+                                                    <div class="dropdown-indent">
+                                                        <a href="/<?=$category['url']?>/" class="dropdown-title"><?=$category['name']?></a>
+
+                                                        <?
+                                                            $SQL = "SELECT * FROM `category` WHERE `status`=1 and `parentId`=".$category['id']." ORDER BY `id`";
+                                                            $result_catalog = mysql_query($SQL);
+                                                            $count = mysql_num_rows($result_catalog);
+                                                            if ($count > 0)
+                                                            {
+												                $category_parent = mysql_fetch_array($result_catalog);
+                                                                do {
+                                                        ?>
+                                                                <p><a href="/<?=$category['url']?>/<?=$category_parent['url']?>/"><?=$category_parent['name']?></a></p>
+                                                        <?  } while($category_parent = mysql_fetch_array($result_catalog));
+											        }
+                                                ?>
+                                                    </div>
+                                                </div>
+                                                    <?
+									                    $i++;
+								                        } while($category = mysql_fetch_array($result_category));
+							                        }
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li <?if ($page_url == "gallery") {?>class="active"<?}?>><a href="/gallery/">Услуги печников</a></li>
+                    <li <?if ($page_url == "contacts") {?>class="active"<?}?>><a href="/contacts/">Контакты</a></li>
+                </ul>
+                <div class="header-top-left header-top-left-menu visible-xs">
+                    <span>Г. ЧЕРЕПОВЕЦ, УЛ. ГОГОЛЯ, 51</span>
+                    <span>ПН-ПТ 08:00 - 17:00</span>
+                    <span class="hidden-md">ГРАФИК ОТГРУЗОК: ПН-ВС 09:00 - 17:00</span>
+                </div>
+            </div>
+
+            <div class="navbar-price">
+                <a href="/kirpich/" class="link-catalog">Каталог</a>
+                <a href="#" class="hidden hidden-xs hidden-md" onclick="yaCounter46843548.reachGoal ('skachal_prais'); return true;"><span class="icon-price hidden-xs"></span>Скачать прайс</a>
+                <a href="/cart/"><span class="icon-basket"></span>Корзина - <span class="inbasketcount">0</span></a> <!--Если в корзине есть товар, для span добавить класс active-->
+            </div>
+        </div>
+    </nav>
+</header>
